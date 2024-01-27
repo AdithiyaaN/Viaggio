@@ -1,0 +1,7 @@
+.Loginpage{
+    --background: rgb(0, 0, 0) ;
+}
+
+.Loginpage div{
+    border-radius: 30px;
+}

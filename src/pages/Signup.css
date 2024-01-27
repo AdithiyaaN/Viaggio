@@ -1,0 +1,70 @@
+/* Signup.css */
+
+/* Font-face for Italiana font */
+@font-face {
+    font-family: 'Italiana';
+    font-style: normal;
+    font-weight: 400;
+    src: url(http://fonts.gstatic.com/s/italiana/v20/QldNNTtLsx4E__B0XTmUY31Wx7Vv.woff2) format('woff2');
+  }
+  
+  /* Styles specific to the Signup page */
+.signup-page ion-card {
+    background-image:url(https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1380&t=st=1706266909~exp=1706267509~hmac=cb5ca0c50e51300b90e1649f6c06a2071ffe2ce1832315559515c7e610d85868);
+    background-repeat:no-repeat;
+    background-size: cover;
+  } 
+
+  .signup-page div{
+    background-color: #000000;
+    opacity: 0.8 ;
+    border-radius: 15px;
+  }
+  
+  .signup-page ion-card-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff; /* Dark title color */
+  }
+  
+  .signup-page ion-item {
+    margin-bottom: 20px;
+  }
+  
+  .signup-page ion-input {
+    padding: 14px;
+    font-size: 1em;
+    color: #e4d9d9; /* Input text color */
+  }
+  
+  .signup-page ion-radio-group {
+    margin-top: 20px;
+  }
+  
+  .signup-page ion-radio {
+    margin-bottom: 15px;
+    color: #555;
+    --background: #ffc107; /* Radio background color */
+    --border-color: #ffc107; /* Radio border color */
+    --inner-background: #fff; /* Radio inner circle background color */
+    --inner-border-color: #ffc107; /* Radio inner circle border color */
+    font-size: small;
+  }
+  
+  .signup-page ion-button {
+    width: 100%;
+    margin-top: 20px;
+    --border-radius: 10px;
+    --background: #ffc107; /* Button background color */
+    --color: #fff; /* Button text color */
+    font-weight: bold;
+  }
+  
+  .signup-page ion-card-title {
+    font-family: 'Italiana';
+    font-size: 1.8em;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 15px;
+  }

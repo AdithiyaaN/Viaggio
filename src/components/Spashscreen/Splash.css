@@ -1,0 +1,40 @@
+/* SplashScreen.css */
+  
+  @font-face {
+    font-family: 'Italiana';
+    font-style: normal;
+    font-weight: 400;
+    src: url(http://fonts.gstatic.com/s/italiana/v20/QldNNTtLsx4E__B0XTmUY31Wx7Vv.woff2) format('woff2');
+    }
+    
+  .Viaggio {
+    color: white;
+    font-size: 10vw; /* Responsive font size */
+    font-family: 'Italiana';
+    font-weight: 40;
+    margin-top: 20px;
+    opacity: .7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  @font-face {
+    font-family: 'Herr Von Muellerhoff';
+    font-style: normal;
+    font-weight: 400;
+    src: url(http://fonts.gstatic.com/s/herrvonmuellerhoff/v21/WBL6rFjRZkREW8WqmCWYLgCkQKXb4CAft3c__qJY3QPQ.woff2) format('woff2');
+  }
+
+
+  .YourNextAdventureAwaits {
+    color: white;
+    font-size: 5vw; /* Responsive font size */
+    font-family: 'Herr Von Muellerhoff';
+    font-weight: 400;
+    margin-top: 10px;
+    max-width: vh;
+    opacity: 0.6;
+  }

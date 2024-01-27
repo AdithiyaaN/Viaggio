@@ -1,0 +1,17 @@
+.Home-title {
+    color: white;
+    font-size: 5vh; /* Responsive font size */
+    font-family: 'Italiana';
+    font-weight: 40;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: .7;
+    text-align: center;
+    width: 100%;
+  }
+
+  .location-button {
+    color: #777b7e; /* Set the color to a desired value */
+    font-size: 12px; /* Set the font size to a desired value */
+    margin-right: 3vh;
+  }
