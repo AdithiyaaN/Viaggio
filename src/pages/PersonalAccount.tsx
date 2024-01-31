@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import beach from './beach.png'
+import { useHistory } from 'react-router-dom';
 
 import {
   IonContent,
@@ -24,6 +25,7 @@ import {
 } from '@ionic/react';
 
 const AccountPage: React.FC = () => {
+  const history = useHistory();
   const [showPopover, setShowPopover] = useState(false);
   const [selectedSegment, setSelectedSegment] = useState<string | undefined | number>('visited');
   
@@ -54,7 +56,7 @@ const AccountPage: React.FC = () => {
         <IonTitle className='Home-title'>Viaggio</IonTitle>
         </IonToolbar>
         <IonButtons slot="start">
-            <IonButton>Back</IonButton>
+            <IonButton onClick={() => history.push('/home')}>Back</IonButton>
           </IonButtons>
       </IonHeader>
 

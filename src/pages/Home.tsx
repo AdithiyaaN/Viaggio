@@ -2,13 +2,14 @@ import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, Ion
 import ExploreContainer from '../components/ExploreContainer';
 import { IonLabel, IonSegment, IonSegmentButton } from '@ionic/react';
 import React, { useEffect, useState } from 'react';
-import {IonButton, IonIcon, IonPopover } from '@ionic/react';
+import {IonButton, IonIcon, IonPopover, IonRouterLink } from '@ionic/react';
 import { informationCircleOutline } from 'ionicons/icons';
 import './Home.css';
 import Slideshow from './Slideshow'
 import Searchbar from './Searchbar';
 import Package from './Package';
 import Example from './Segment';
+import { useHistory } from 'react-router-dom';
 
 interface Location {
 latitude: number;
@@ -17,6 +18,22 @@ longitude: number;
 
 
 function Home() {
+
+  const history = useHistory();
+  const handleCardClick = () => {
+    // Navigate to the Search page
+    history.push('/search');
+  };
+
+  const handlePage1Click = () => {
+    // Navigate to Page 1
+    history.push('/featured');
+  };
+
+  const handlePage2Click = () => {
+    // Navigate to Page 2
+    history.push('/personalaccount');
+  };
 
   const [location, setLocation] = useState<Location | null>(null);
   const [locationName, setLocationName] = useState<string | null>(null);
@@ -63,15 +80,15 @@ console.error('Error getting location:', error);
         <IonCardContent>Home</IonCardContent>
 
           <IonCard>
-            <IonCardContent>Search</IonCardContent>
+            <IonCardContent onClick={handleCardClick}>Search</IonCardContent>
           </IonCard>
 
           <IonCard>
-            <IonCardContent>Featured</IonCardContent>
+            <IonCardContent onClick={handlePage1Click}>Featured</IonCardContent>
           </IonCard>
           
           <IonCard>
-            <IonCardContent>Personal Account</IonCardContent>
+            <IonCardContent onClick={handlePage2Click}>Personal Account</IonCardContent>
           </IonCard>
 
           <IonCard>

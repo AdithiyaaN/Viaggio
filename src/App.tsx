@@ -6,7 +6,10 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Splash from './components/Spashscreen/Splash';
 import PersonalAccount from './pages/PersonalAccount';
-
+import FeaturedPage from './pages/Featured';
+import Search from './pages/Search';
+import DestinationDetail from './pages/DestinationDetail';
+import AddPlaceForm from './pages/AddPlaceForm';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -29,7 +32,14 @@ import './theme/variables.css';
 
 setupIonicReact();
 
-const App: React.FC = () => (
+const App: React.FC = () =>{
+    const handleSubmit = (formData: FormData) => {
+      // Handle the form submission, for example, send it to your backend API
+      console.log(formData);
+    };
+
+return (
+
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
@@ -51,9 +61,20 @@ const App: React.FC = () => (
         <Route exact path="/personalaccount">
           <PersonalAccount />
         </Route>
+        <Route exact path="/featured">
+          <FeaturedPage />
+        </Route>
+        <Route exact path="/form">
+          <AddPlaceForm onSubmit={handleSubmit}/>
+        </Route>
+        <Route exact path="/search">
+          <Search />
+        </Route>
+        <Route path="/destination/:id" component={DestinationDetail} />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
 );
+};
 
 export default App;
